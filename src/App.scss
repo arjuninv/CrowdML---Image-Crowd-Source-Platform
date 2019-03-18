@@ -1,0 +1,121 @@
+$mdc-theme-primary: #377dff;
+$mdc-theme-on-primary: #ffffff;
+
+@import "@material/button/mdc-button";
+@import "@material/checkbox/mdc-checkbox";
+@import "@material/textfield/mdc-text-field";
+
+@include mdc-checkbox-focus-indicator-color(#377dff);
+@include mdc-checkbox-container-colors(
+  $unmarked-stroke-color: #377dff,
+  $marked-stroke-color: #377dff,
+  $marked-fill-color: #377dff
+);
+.profileBody {
+  font-family: "Poppins";
+  background-image: linear-gradient(
+    to right bottom,
+    #fbf5ef,
+    #fef4f1,
+    #fff4f5,
+    #fdf4f9,
+    #f9f5fd,
+    #f7f5fd,
+    #f6f4fe,
+    #f4f4fe,
+    #f7f1fc,
+    #faeef8,
+    #fdebf3,
+    #ffe9ec
+  );
+  padding-top: 3vh;
+}
+
+img {
+  border-radius: 4em;
+  height: 80px;
+  width: 80px;
+}
+.topBtns {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 10px;
+}
+.mdc-button {
+  height: 45px;
+}
+
+.mdc-text-field {
+  width: 100%;
+}
+.names {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  grid-row-gap: 50px;
+  grid-column-gap: 40px;
+}
+.chips {
+  border: 1px rgb(202, 202, 202) solid;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#tagAddBtn {
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+}
+.body {
+  font-family: "Poppins";
+  width: 45vw;
+  margin-left: 27%;
+  padding-top: 16vh;
+}
+.title {
+  font-size: 30px;
+  color: #377dff;
+}
+.mdc-button {
+  height: 45px;
+}
+.mdc-text-field {
+  width: 100%;
+}
+
+.fieldsAndButton {
+  width: 100%;
+  margin-bottom: 13px;
+}
+
+.top {
+  margin-bottom: 50px;
+}
+.forgotPassword:hover {
+  color: black;
+}
+
+@media screen and (max-width: 480px) {
+  .names {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 40px;
+    grid-template-rows: auto;
+    grid-row-gap: 30px;
+  }
+  .body {
+    width: 99vw;
+    margin-left: 1%;
+  }
+  .signup {
+    display: grid;
+  }
+  //   .chips {
+  //     border: 1px rgb(202, 202, 202) solid;
+  //     border-radius: 8px;
+  //     display: grid;
+  //     grid-template-columns: auto auto;
+  //   }
+}
