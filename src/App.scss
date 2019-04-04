@@ -4,6 +4,9 @@ $mdc-theme-on-primary: #ffffff;
 @import "@material/button/mdc-button";
 @import "@material/checkbox/mdc-checkbox";
 @import "@material/textfield/mdc-text-field";
+@import "@material/chips/mdc-chips";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/card/mdc-card";
 
 @include mdc-checkbox-focus-indicator-color(#377dff);
 @include mdc-checkbox-container-colors(
@@ -11,6 +14,28 @@ $mdc-theme-on-primary: #ffffff;
   $marked-stroke-color: #377dff,
   $marked-fill-color: #377dff
 );
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 21em 21em 21em;
+  grid-template-rows: auto;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+}
+.mainPageContent {
+  padding-top: 80px;
+  margin-left: 4em;
+}
+.box {
+  height: 4em;
+  width: 20em;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+#water {
+  border-radius: 10px;
+}
 .profileBody {
   font-family: "Poppins";
   background-image: linear-gradient(

@@ -1,9 +1,7 @@
 import React, { PureComponent } from "react";
-import Button from "./elements/buttons";
-import InputField from "./elements/input-fields";
 import "./App.scss";
-import Checkbox from "./elements/checkboxes";
 import { Link } from "react-router-dom";
+import { Button, InputField, Checkbox, BootstrapCard, MCard } from "./elements";
 
 export class Login extends PureComponent {
   state = {};
@@ -138,9 +136,52 @@ export class Signup extends PureComponent {
 
 export class Main extends PureComponent {
   render() {
+    let styles = {
+      body: {
+        marginTop: 100
+      },
+      list: {
+        width: 250
+      },
+      fullList: {
+        width: "auto"
+      }
+    };
     return (
       <div>
-        <h1>Working!</h1>
+        <div className="container container-fluid">
+          <div style={{ marginTop: 100 }} />
+          <nav className="navbar fixed-top navbar-light bg-light">
+            <span className="navbar-brand">
+              <b>Crowdsource</b>
+            </span>
+            <div className="d-flex flex-row justify-items-center">
+              <div className="mr-3">
+                <span style={{ border: "1px solid black" }}>Admin</span>
+              </div>
+              <div>
+                <span style={{ border: "1px solid black" }}>Moderator</span>
+              </div>
+            </div>
+          </nav>
+
+          <div className="mainPageContent">
+            <div className="d-flex flex-row justify-content-around align-items-center">
+              <div>
+                <span>What would you like to help with?</span>
+              </div>
+              <div className="box">Box</div>
+            </div>
+            <div className="cardsGrid">
+              <MCard />
+              <MCard />
+              <MCard />
+              <MCard />
+              <MCard />
+              <MCard />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
